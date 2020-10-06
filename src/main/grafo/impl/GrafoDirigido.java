@@ -3,7 +3,7 @@ package main.grafo.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.Grafo;
+import main.interfaz.Grafo;
 import main.model.Arco;
 import main.model.Nodo;
 
@@ -67,7 +67,7 @@ public class GrafoDirigido implements Grafo {
 
 	@Override
 	public void addArco(Nodo nodoOrigen, Nodo nodoDestino, int peso) {
-		throw new UnsupportedOperationException();		
+		throw new UnsupportedOperationException();
 	}
 
 }

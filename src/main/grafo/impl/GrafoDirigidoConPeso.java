@@ -3,30 +3,31 @@ package main.grafo.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.Grafo;
+import main.interfaz.Grafo;
 import main.model.Arco;
 import main.model.Nodo;
 
-public class GrafoDirigidoConPeso implements Grafo{
+public class GrafoDirigidoConPeso implements Grafo {
 
 	List<Nodo> nodos = new ArrayList<>();
 	List<Arco> arcos = new ArrayList<>();
-	
-	public GrafoDirigidoConPeso() { }
-	
+
+	public GrafoDirigidoConPeso() {
+	}
+
 	@Override
 	public void addNodo(String nombre) {
 		Nodo nodo = new Nodo();
 		nodo.setNombre(nombre);
 		nodos.add(nodo);
-		
+
 	}
 
 	@Override
 	public void addArco(String origen, String destino, int peso) throws Exception {
 		Nodo nodoOrigen = buscarNodo(origen);
 		Nodo nodoDestino = buscarNodo(destino);
-		
+
 		// Origen o destino no encontrado
 		if (nodoOrigen == null) {
 			throw new RuntimeException("Error en la Búsqueda: NodoOrigen no encontrado");
@@ -34,14 +35,13 @@ public class GrafoDirigidoConPeso implements Grafo{
 		if (nodoDestino == null) {
 			throw new RuntimeException("Error en la Búsqueda: NodoOrigen no encontrado");
 		}
-		
+
 		addArco(nodoOrigen, nodoDestino, peso);
-		
+
 	}
 
 	@Override
-	public void addArco(Nodo nodoOrigen, Nodo nodoDestino, int peso)
-	{
+	public void addArco(Nodo nodoOrigen, Nodo nodoDestino, int peso) {
 		Arco arco = new Arco();
 		arco.setOrigen(nodoOrigen);
 		arco.setDestino(nodoDestino);
@@ -53,12 +53,12 @@ public class GrafoDirigidoConPeso implements Grafo{
 	@Override
 	public void addArco(Nodo nodoOrigen, Nodo nodoDestino) {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
 	public Nodo buscarNodo(String nombre) {
-		for (Nodo nodo: nodos) {
+		for (Nodo nodo : nodos) {
 			if (nodo.getNombre().equals(nombre)) {
 				return nodo;
 			}
@@ -69,7 +69,7 @@ public class GrafoDirigidoConPeso implements Grafo{
 	@Override
 	public void addArco(String origen, String destino) {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 }

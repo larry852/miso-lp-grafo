@@ -1,38 +1,38 @@
-package main;
+package main.fabrica;
 
 import main.estrategia.impl.EstrategiaBusquedaBfs;
 import main.estrategia.impl.EstrategiaBusquedaDfs;
 import main.grafo.impl.GrafoDirigido;
 import main.grafo.impl.GrafoDirigidoConPeso;
 import main.grafo.impl.GrafoNormal;
+import main.interfaz.EstrategiaBusqueda;
+import main.interfaz.Grafo;
 
 public class FabricaGrafo {
-	public static Grafo obtenerNuevoGrafo() {
-		boolean normal = true;
-		boolean dirigido = false;
-		boolean dirigidoPeso = false;
 
-		if (normal) {
+	public static Grafo obtenerNuevoGrafo() {
+		Configuracion configuracion = new Configuracion();
+
+		if (configuracion.isNormal()) {
 			return new GrafoNormal();
-		} else if (dirigido) {
+		} else if (configuracion.isDirigido()) {
 			return new GrafoDirigido();
-		} else if (dirigidoPeso) {
+		} else if (configuracion.isDirigidoPeso()) {
 			return new GrafoDirigidoConPeso();
 		}
-		
+
 		return null;
 	}
-	
-	public static EstrategiaBusqueda obtenerEstrategiaBusqueda() {
-		boolean dfs = true;
-		boolean bfs = false;
 
-		if (dfs) {
+	public static EstrategiaBusqueda obtenerEstrategiaBusqueda() {
+		Configuracion configuracion = new Configuracion();
+
+		if (configuracion.isDfs()) {
 			return new EstrategiaBusquedaDfs();
-		} else if (bfs) {
+		} else if (configuracion.isBfs()) {
 			return new EstrategiaBusquedaBfs();
 		}
-		
+
 		return null;
 	}
 }

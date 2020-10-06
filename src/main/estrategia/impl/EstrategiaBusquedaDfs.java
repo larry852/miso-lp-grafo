@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import main.EstrategiaBusqueda;
+import main.interfaz.EstrategiaBusqueda;
 import main.model.Nodo;
 
 public class EstrategiaBusquedaDfs implements EstrategiaBusqueda {
 
 	@Override
-	public boolean existeRuta(Nodo nodoOrigen , Nodo nodoDestino) throws Exception {
+	public boolean existeRuta(Nodo nodoOrigen, Nodo nodoDestino) throws Exception {
 		if (buscarRuta(nodoOrigen, nodoDestino) != null) {
 			return true;
 		}
@@ -18,7 +18,7 @@ public class EstrategiaBusquedaDfs implements EstrategiaBusqueda {
 	}
 
 	@Override
-	public List<Nodo> buscarRuta(Nodo nodoOrigen , Nodo nodoDestino) throws Exception {
+	public List<Nodo> buscarRuta(Nodo nodoOrigen, Nodo nodoDestino) throws Exception {
 		List<Nodo> nodosRuta = new ArrayList<>();
 
 		// Origen o destino no encontrado
