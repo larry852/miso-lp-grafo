@@ -2,7 +2,7 @@ package main;
 
 import java.util.List;
 
-import main.impl.Nodo;
+import main.model.Nodo;
 
 public interface EstrategiaBusqueda {
 	List<Nodo> buscarRuta(Nodo nodoOrigen, Nodo nodoDestino) throws Exception;

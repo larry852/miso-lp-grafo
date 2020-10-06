@@ -1,9 +1,11 @@
-package main.impl;
+package main.grafo.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import main.Grafo;
+import main.model.Arco;
+import main.model.Nodo;
 
 public class GrafoNormal implements Grafo {
 

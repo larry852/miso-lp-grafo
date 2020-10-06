@@ -1,6 +1,6 @@
 package main;
 
-import main.impl.Nodo;
+import main.model.Nodo;
 
 public interface Grafo {
 	

@@ -1,10 +1,10 @@
 package main;
 
-import main.impl.EstrategiaBusquedaBfs;
-import main.impl.EstrategiaBusquedaDfs;
-import main.impl.GrafoDirigido;
-import main.impl.GrafoDirigidoConPeso;
-import main.impl.GrafoNormal;
+import main.estrategia.impl.EstrategiaBusquedaBfs;
+import main.estrategia.impl.EstrategiaBusquedaDfs;
+import main.grafo.impl.GrafoDirigido;
+import main.grafo.impl.GrafoDirigidoConPeso;
+import main.grafo.impl.GrafoNormal;
 
 public class FabricaGrafo {
 	public static Grafo obtenerNuevoGrafo() {

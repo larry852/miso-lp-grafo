@@ -1,4 +1,4 @@
-package main.impl;
+package main.estrategia.impl;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 import main.EstrategiaBusqueda;
+import main.model.Nodo;
 
 public class EstrategiaBusquedaBfs implements EstrategiaBusqueda{
 

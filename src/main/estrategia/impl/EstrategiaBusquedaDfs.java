@@ -1,10 +1,11 @@
-package main.impl;
+package main.estrategia.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
 import main.EstrategiaBusqueda;
+import main.model.Nodo;
 
 public class EstrategiaBusquedaDfs implements EstrategiaBusqueda {
 
